@@ -3,8 +3,12 @@
 /*===== VARIABLES CSS =====*/
 
 .Project_container{
+
+
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: auto auto auto;
+  /* grid-template-columns: repeat(auto-fit,1fr); */
   grid-gap: 10px; /* Adjust as needed */
 }
 .p1{
@@ -13,8 +17,12 @@ height: 500px;
 
 }
 .p1 img{
+  margin: 20px;
+  padding: 30px;
   width: 400px;
   height: 300px;
+  box-shadow: rgba(46, 182, 240, 0.4) 5px 5px, rgba(46, 182, 240, 0.3) 10px 10px, rgba(46, 182, 240, 0.2) 15px 15px, rgba(46, 182, 240, 0.1) 20px 20px, rgba(46, 182, 240, 0.05) 25px 25px;
+  
 
 }
 
@@ -384,15 +392,31 @@ img {
 }
 
 /* ===== MEDIA QUERIES=====*/
+/* Projects responsive */
+@media screen and (max-width: 768px) {
+  .Project_container {
+    grid-template-columns: auto auto; /* Two columns for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Project_container {
+    grid-template-columns: auto; /* Single column for even smaller screens */
+  }
+}
+
 @media screen and (max-width: 320px) {
   .home {
     row-gap: 2rem;
   }
   .home__img {
     width: 200px;
+
   }
+  
 }
 @media screen and (min-width: 576px) {
+  
   .home {
     padding: 4rem 0 2rem;
   }
@@ -434,6 +458,7 @@ img {
   }
 }
 @media screen and (min-width: 768px) {
+ 
   body {
     margin: 0;
   }
@@ -490,6 +515,8 @@ img {
   }
 }
 @media screen and (min-width: 992px) {
+ 
+ 
   .bd-grid {
     margin-left: auto;
     margin-right: auto;
