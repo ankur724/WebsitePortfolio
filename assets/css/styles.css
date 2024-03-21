@@ -392,19 +392,6 @@ img {
 }
 
 /* ===== MEDIA QUERIES=====*/
-/* Projects responsive */
-@media screen and (max-width: 768px) {
-  .Project_container {
-    grid-template-columns: auto auto; /* Two columns for smaller screens */
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .Project_container {
-    grid-template-columns: auto; /* Single column for even smaller screens */
-  }
-}
-
 @media screen and (max-width: 320px) {
   .home {
     row-gap: 2rem;
