@@ -69,6 +69,8 @@ Ankur Saxena`
 });
 
 // Start the server
-app.listen(3000, function () {
-  console.log('Server started at http://localhost:3000');
+const port = process.env.PORT;
+
+app.listen(port, function() {
+    console.log("Server started at port " + port);
 });
